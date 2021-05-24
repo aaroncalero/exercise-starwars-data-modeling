@@ -29,7 +29,6 @@ class Planetas(Base):
     poblacion = Column(String(250), nullable=False)
     terreno = Column(String(250), nullable=False)
 
-
 class Usuarios(Base):
     __tablename__ = 'usuario'
     # Here we define columns for the table address.
@@ -50,9 +49,6 @@ class Favoritos(Base):
     planet = relationship(Planetas)
     personaje_id = Column(Integer, ForeignKey('persona.id'))
     person = relationship(Personajes)
-  
-
-
 
     def to_dict(self):
         return {}
